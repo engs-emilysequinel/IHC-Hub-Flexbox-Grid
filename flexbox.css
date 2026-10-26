@@ -1,0 +1,9 @@
+.demo {
+background-color: #20202e;
+ border: 1px solid rgba(0, 217, 255, 0.25);
+border-radius: 12px;
+padding: 20px;
+margin: 20px 0;
+ min-height: 150px;
+
+}
