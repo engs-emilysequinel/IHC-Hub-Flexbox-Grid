@@ -7,3 +7,14 @@ margin: 20px 0;
  min-height: 150px;
 
 }
+ .box {
+background-color: #414153;
+color: #00d9ff;
+border: 1px solid rgba(0, 217, 255, 0.3);
+border-radius: 10px;
+padding: 18px;
+text-align: center;
+font-weight: bold;
+ }
+
+ 
