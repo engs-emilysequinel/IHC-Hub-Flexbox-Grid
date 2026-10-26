@@ -13,7 +13,105 @@
     <h1>Grid - Aula de CSS</h1>
     <a href="index.html">⬅ Voltar ao Hub</a>
   </header>
-
-  <h2>Introdução ao Grid</h2>
-  <p>Grid é um sistema de layout que</p>
   <main>
+<section>
+  <h2>Introdução ao Grid</h2>
+  <p>Grid é um sistema de layout bidimensional que organiza elementos com linhas e colunas.</p>
+
+  <h2>Principais propriedades: </h2>
+  <ul>
+<li><code>display: grid;</code></li>
+<li><code>grid-template-columns</code></li> 
+<li><code>grid-template-rows</code></li>
+<li><code>gap</code></li>
+<li><code>grid-column</code></li>
+<li><code>grid-row</code></li>
+  </ul>
+</section>
+
+<section>
+<h2>Criando um Grid</h2>
+
+  <p>A propriedade <code>display: grid;</code> ativa o sistema Grid no elemento</p>
+<div class="demo grid-basico">
+<div class="box">Item 1</div>
+<div class="box">Item 2</div>
+<div class="box">Item 3</div>
+<div class="box">Item 4</div>
+<div class="box">Item 5</div>
+<div class="box">Item 6</div>
+</div>
+
+ <pre><code>.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}</code></pre>
+<p>Aqui os elementos são distribuídos em três colunas e duas linhas. </p>
+</section>
+
+<section>
+  <h2>Definindo as colunas</h2>
+<p>Com <code>grid-template-columns</code>,podemos definir quantas colunas vão ter e como o espaço será definido.</p>
+<div class="demo grid-colunas">
+  <div class="box">Coluna 1</div>
+  <div class="box">Coluna 2</div>
+  <div class="box">Coluna 3</div>
+  </div>
+
+<pre><code>.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 15px;}</code></pre>
+
+<p>A primeira coluna recebe duas frações do espaço e as outras recebem uma fração.</p>
+</section>
+
+<section>
+  <h2>Definindo as linhas</h2>
+ <p>A propriedade <code>grid-template-rows</code>permite escolher a altura das linhas.</p>
+
+<div class="demo grid-linhas">
+  <div class="box">Linha 1</div>
+  <div class="box">Linha 1</div>
+  <div class="box">Linha 2</div>
+  <div class="box">Linha 2</div>
+</div>
+
+<pre><code>.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80px 130px;
+  gap: 15px;
+}</code></pre>
+</section>
+
+<section>
+ <h2> Ocupando mais de uma coluna</h2>
+<p> Com <code>grid-column</code>, um item pode ocupar mais de uma coluna. </p>
+
+  <div class="demo grid-span">
+    <div class="box destaque">Item ocupa duas colunas</div>
+    <div class="box">Item 2</div>
+    <div class="box">Item 3</div>
+    <div class="box">Item 4</div>
+    </div>
+
+<pre><code>.destaque {
+    grid-column: span 2;
+}</code></pre>
+</section>
+
+<section>
+    <h2> Centralização de Grid</h2>
+    <p>A propriedade <code>place-items: center;</code> centraliza os itens tanto horizontal quanto vertical.</p>
+
+<div class="demo grid-center">
+<div class="box">Centro</div>
+</div>
+
+<pre><code>.container {
+display: grid;
+place-items: center;}</code></pre>
+</section>
+</main>
