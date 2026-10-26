@@ -33,7 +33,8 @@
             </ul>
         </section>
 
-        <section>Como criar um Flexbox?</section>
+        <section>
+            <h2>Como criar um Flexbox?</h2>
         <p>Primeiro utilizamos: 
         <code>display: flex;</code> 
         Os elementos passam a ser organizados em uma linha por padrão
@@ -49,4 +50,56 @@
     display: flex;
     justify-content: space-between;
 }</code>
+
+<p>Outros:</p>
+<ul>
+                <li><code>center</code>: centraliza os itens;</li>
+                <li><code>flex-start</code>: alinha no início;</li>
+                <li><code>flex-end</code>: alinha no final;</li>
+                <li><code>space-around</code>: distribui espaço ao redor;</li>
+                <li><code>space-evenly</code>: distribui espaços iguais.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Centralização</h2>
+              <p>
+                Podemos centralizar um elemento horizontal e verticalmente
+                combinando <code>justify-content</code> e
+                <code>align-items</code>.
+            </p>
+
+        <div class="demo flex-center">
+        <div class="box">Centro</div>
+         </div>
+
+    <pre><code>.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+        </section>
+
+        <section>
+            <h2>Quebra de linha com flex-wrap</h2>
+            <p>
+                Quando os itens não cabem em uma linha,
+                <code>flex-wrap: wrap;</code> permite que eles
+                passem para linhas seguintes.
+            </p>
+
+    <div class="demo flex-wrap">
+        <div class="box">Item 1</div>
+        <div class="box">Item 2</div>
+    <div class="box">Item 3</div>
+        <div class="box">Item 4</div>
+        <div class="box">Item 5</div>
+            </div>
+
+<pre><code>.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}</code></pre>
+</section>
 
